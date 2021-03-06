@@ -2,6 +2,7 @@
 
 $curl = curl_init();
 $alamat_gateway = "https://whatsva.com/api/sendMessageGroup";
+$token = "GbHl7s95";
 $id_device = "52";
 $tujuan = "6285156345912-1612258797@g.us";
 $message = "halo";
@@ -17,7 +18,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
   CURLOPT_HTTPHEADER => array(
-    "apikey: GbHl7s95"
+    "apikey: ".$token
   ),
 ));
 

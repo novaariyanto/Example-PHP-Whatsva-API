@@ -2,6 +2,7 @@
 
 $curl = curl_init();
 $alamat_gateway = "https://whatsva.com/api/sendFileUrl";
+$token = "UPANpOlm";
 $id_device = "419";
 $tujuan = "62895361034833@s.whatsapp.net";
 $message = "halo";
@@ -18,7 +19,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
   CURLOPT_HTTPHEADER => array(
-    "apikey: GbHl7s95"
+    "apikey: ".$token
   ),
 ));
 
