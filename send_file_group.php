@@ -5,7 +5,7 @@ $base_path =dirname( __FILE__ );
 $file = 'logo.jpg';
 
 $curl = curl_init();
-$alamat_gateway = "http://localhost:8089/api/sendMessageGroup";
+$alamat_gateway = "https://whatsva.com/api/sendMessageGroup";
 $token = "token123";
 $id_device = "15";
 $tujuan = "6285156345912-1612258797@g.us";
