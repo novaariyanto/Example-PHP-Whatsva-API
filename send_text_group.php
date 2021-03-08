@@ -1,9 +1,9 @@
 <?php
 
 $curl = curl_init();
-$token = "token123";
+$token = "OIptCXU3";
 $data =[
-    "id_device"=> "15",
+    "id_device"=> "48",
      "message"=> "Report Line Stop >= 60 Menit
      MTC IGP-2
      (07/03/2021)
@@ -21,10 +21,10 @@ $data =[
      - Setting pressure workrest
      -Prevention: 
      -LS: 90 Menit",
-     "tujuan"=> "62895361034833@s.whatsapp.net"];
+     "tujuan"=> "6285156345912-1612258797@g.us"];
 $payload = json_encode($data );
 
-$ch = curl_init( "http://localhost:8089/api/sendTextGroup" );
+$ch = curl_init( "https://whatsva.com/api/sendTextGroup" );
 # Setup request to send json via POST.
 
 curl_setopt( $ch, CURLOPT_POSTFIELDS, $payload );
