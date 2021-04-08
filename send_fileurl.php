@@ -7,7 +7,7 @@ $id_device = "419";
 $tujuan = "62895361034833@s.whatsapp.net";
 $message = "halo";
 $file_url = "http://www.untag-smd.ac.id/files/Perpustakaan_Digital_2/Membongka%20Gurita%20Cikeas.pdf";
-$url_opt = $alamat_gateway."?id_device=".$id_device."&tujuan=&message=".$message."&file_url=".$file_url;
+$url_opt = $alamat_gateway."?id_device=".$id_device."&tujuan=".$tujuan."&message=".$message."&file_url=".$file_url;
 
 curl_setopt_array($curl, array(
   CURLOPT_URL => $url_opt,
