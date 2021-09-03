@@ -2,16 +2,15 @@
 define( 'ABSPATH', dirname( __FILE__ ) . '/' );
 
 $base_path =dirname( __FILE__ );
-$file = 'file.pdf';
+$file = 'logo.jpg';
 
 $curl = curl_init();
-$alamat_gateway = "https://whatsva.com/api/sendFiles";
-$token = "UPANpOlm";
-$id_device = "419";
-$tujuan = "62895361034833@s.whatsapp.net";
+$alamat_gateway = "https://whatsva.com/api/sendMessagesFiles";
+$token = "fTV0gxMJftgl";
+$tujuan = "6285156345912";
 $message = "halo";
 
-$url_opt = $alamat_gateway."?id_device=".$id_device."&tujuan=&message=".$message;
+$url_opt = $alamat_gateway."?number=".$tujuan."&message=".$message."&apikey=".$token;
 
 curl_setopt_array($curl, array(
   CURLOPT_URL => $url_opt,
@@ -31,7 +30,4 @@ curl_setopt_array($curl, array(
 $response = curl_exec($curl);
 
 curl_close($curl);
-print_r($response);
-
-
-?>
+echo $response;

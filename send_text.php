@@ -1,19 +1,19 @@
 <?php
 
 $curl = curl_init();
-$device_api_key = "4YwLki3nduP8";
 $data = [
     "message" => "test",
-    "tujuan" => "62895361034833@s.whatsapp.net",
+    "number" => "0895361034833",
+    "apikey"=> "4YwLki3nduP8"
 ];
 $payload = json_encode($data);
 
-$ch = curl_init("https://whatsva.com/api/sendMessage");
+$ch = curl_init("https://whatsva.com/api/sendMessages");
 # Setup request to send json via POST.
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', "apikey: " . $device_api_key));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 # Return response instead of printing.
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 # Send request.
